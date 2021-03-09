@@ -1,4 +1,5 @@
 from folium import Map
+from geo import Geopoint
 
 latitude = 40.09
 longitude = -3.47
@@ -17,6 +18,9 @@ else:
 location = [antipode_latitude,antipode_longitude]
 mymap = Map(location)
 mymap.save("antipode.html")
+
+mypoint = Geopoint(41.2,4.1)
+print(mypoint.closest_parallel())
 
 print(antipode_latitude)
 print(antipode_longitude)
